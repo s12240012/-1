@@ -1,0 +1,36 @@
+def logical_and(a, b):
+    return a and b
+
+def logical_or(a, b):
+    return a or b
+
+def logical_andnot(a, b):
+    return a and not b
+
+def logical_ornot(a, b):
+    return not a or b
+
+def logical_ifthen(a, b):
+    return not a or b
+
+def logical_ifelse(a, b):
+    return not a or b
+
+def logical_iff(a, b):
+    return (not a or b) and (not b or a)
+
+# 打印表头
+print("|  A  |  B  | A AND B | A OR B | A AND NOT B | A OR NOT B | A -> B | A <- B | A <-> B |")
+print("|-----|-----|---------|--------|-------------|------------|--------|--------|---------|")
+
+# 生成真值表
+for A in ["T", "F"]:
+    for B in ["T", "F"]:
+        result_and = logical_and(A, B)
+        result_or = logical_or(A, B)
+        result_andnot = logical_andnot(A, B)
+        result_ornot = logical_ornot(A, B)
+        result_ifthen = logical_ifthen(A, B)
+        result_ifelse = logical_ifelse(A, B)
+        result_iff = logical_iff(A, B)
+ print(f"| {A} | {B} |    {result_and}    |   {result_or}   |      {result_andnot}      |     {result_ornot}    |   {result_ifthen}   |   {result_ifelse}   |   {result_iff}   |")
